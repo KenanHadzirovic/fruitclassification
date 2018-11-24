@@ -1,0 +1,8 @@
+C:\Users\Kenan\Desktop\POOS Projekat\Data classification\DataClassification\DataClassification\bin\Debug\DataClassification.exe.config
+C:\Users\Kenan\Desktop\POOS Projekat\Data classification\DataClassification\DataClassification\bin\Debug\DataClassification.exe
+C:\Users\Kenan\Desktop\POOS Projekat\Data classification\DataClassification\DataClassification\bin\Debug\DataClassification.pdb
+C:\Users\Kenan\Desktop\POOS Projekat\Data classification\DataClassification\DataClassification\obj\Debug\DataClassification.csprojAssemblyReference.cache
+C:\Users\Kenan\Desktop\POOS Projekat\Data classification\DataClassification\DataClassification\obj\Debug\DataClassification.csproj.CoreCompileInputs.cache
+C:\Users\Kenan\Desktop\POOS Projekat\Data classification\DataClassification\DataClassification\obj\Debug\DataClassification.exe
+C:\Users\Kenan\Desktop\POOS Projekat\Data classification\DataClassification\DataClassification\obj\Debug\DataClassification.pdb
+C:\Users\Kenan\Desktop\POOS Projekat\Data classification\DataClassification\DataClassification\bin\Debug\SchemaMap.xslt
