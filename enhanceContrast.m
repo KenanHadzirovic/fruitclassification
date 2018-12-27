@@ -4,4 +4,3 @@ function [ outputImage ] = enhanceContrast(originalImage)
     stretchedImage = stretchlim(originalImage);
     outputImage = imadjust(originalImage,stretchedImage,[]);
 end
-

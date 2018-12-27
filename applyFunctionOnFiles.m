@@ -3,7 +3,12 @@ function [ output ] = applyFunctionOnFiles( path, funct, resultDir )
 %   
 files = dir(fullfile(path, '*.jpg'));
 files = transpose({files.name});
-resultingDirectoryPath = strcat(path,'\',resultDir,'\');
+if resultDir ~= ''
+    resultingDirectoryPath = strcat(path,'\',resultDir,'\');
+else
+    resultingDirectoryPath = strcat(path,'\');
+end
+
 warning('off','MATLAB:MKDIR:DirectoryExists'); % turning of warning for existing folder
 mkdir(resultingDirectoryPath);
 [length,~] = size(files);

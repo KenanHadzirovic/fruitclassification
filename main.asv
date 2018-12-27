@@ -1,0 +1,33 @@
+function [  ] = main(  )
+%MAIN Main function for data recognition
+global path;
+path = strcat(pwd,'\Dataset\train\images\cropped');
+testPath = strcat(pwd,'\Dataset\test\images\cropped');
+%% IMPORT DATA
+disp('Declared global variables. Importing dataset information...');
+[Filename,Xmin,Ymin,Xmax,Ymax] = importfile(strcat(pwd,'\Dataset\train\imageInformation.csv'), 2, 466);
+%% Creating masked images
+disp('Creating masked images...');
+imageMask(Filename, Xmax, Xmin, Ymax, Ymin);
+%% Croping images
+disp('Cropping images...');
+cropImages(Filename, Xmax, Xmin, Ymax, Ymin);
+%% Resizing images
+disp('Resizing images...');
+applyFunctionOnFiles(path, @resizeImage, '');
+%% Applying filters
+disp('Applying sharpening filter...');
+applyFunctionOnFiles(path,@applySharpen,'');
+disp('Contrast...');
+applyFunctionOnFiles(path, @enhanceContrast, '');
+%% Create model
+model = createModel(path);
+save('model.mat', 'model');
+%% Test model
+testLabels = generateLabels(testPath);
+testFeatures = generateHogFeatures(tes);
+predictedLabels = predict(model, testFeatures);
+%% Analysis
+compareLabels(testLabels, predictedLabels);
+end
+
